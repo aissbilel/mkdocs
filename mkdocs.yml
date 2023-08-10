@@ -1,5 +1,5 @@
-site_name: Site name
-site_url: https://dde-website.gitlab.io/mkdocs
+site_name: Documentations
+site_url: https://docs.baissaoui.fr
 site_dir: public
 theme:
   name: material
