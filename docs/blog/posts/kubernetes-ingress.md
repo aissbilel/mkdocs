@@ -1,0 +1,26 @@
+# Tutoriel Kubernetes : Ingress et Networking
+
+## Ingress Controller (NGINX)
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: exemple.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web
+            port:
+              number: 80
+```
+
+Ingress permet d'exposer plusieurs services avec un seul IP + SSL.
